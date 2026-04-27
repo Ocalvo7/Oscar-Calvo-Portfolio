@@ -7,22 +7,24 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0b0b10;
-            --bg-secondary: #121219;
-            --bg-card: #181822;
-            --bg-card-hover: #1e1e2a;
-            --gs-blue: #6ba4c9;
-            --gs-blue-dim: rgba(107, 164, 201, 0.12);
+            --bg-primary: #1a1f2e;
+            --bg-secondary: #212638;
+            --bg-card: #272d42;
+            --bg-card-hover: #2e3550;
+            --gs-blue: #7399c6;
+            --gs-blue-light: #acd4f1;
+            --gs-blue-dim: rgba(115, 153, 198, 0.12);
+            --gs-navy: #00355f;
             --beige: #d4c5a9;
             --beige-light: #ede4d4;
             --beige-dim: rgba(212, 197, 169, 0.10);
             --cream: #f5f0e8;
-            --warm-white: #faf8f4;
-            --text-primary: #f2efe9;
-            --text-secondary: #b5b0a5;
-            --text-muted: #706b60;
-            --border: rgba(212, 197, 169, 0.14);
-            --border-hover: rgba(212, 197, 169, 0.35);
+            --warm-white: #ffffff;
+            --text-primary: #f0eeea;
+            --text-secondary: #b8c1cf;
+            --text-muted: #7a8499;
+            --border: rgba(115, 153, 198, 0.15);
+            --border-hover: rgba(115, 153, 198, 0.35);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,7 +57,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(11, 11, 16, 0.9);
+            background: rgba(26, 31, 46, 0.92);
             backdrop-filter: blur(24px);
             border-bottom: 1px solid var(--border);
         }
@@ -68,7 +70,7 @@
             letter-spacing: 0.02em;
         }
 
-        .nav-logo span { color: var(--beige); }
+        .nav-logo span { color: var(--gs-blue); }
 
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
 
@@ -88,11 +90,11 @@
             position: absolute;
             bottom: -4px; left: 0;
             width: 0; height: 1px;
-            background: var(--beige);
+            background: var(--gs-blue);
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover { color: var(--beige); }
+        .nav-links a:hover { color: var(--gs-blue); }
         .nav-links a:hover::after { width: 100%; }
 
         /* ── HERO ── */
@@ -126,12 +128,12 @@
         .hero-tag {
             font-size: 0.68rem; font-weight: 500;
             letter-spacing: 0.3em; text-transform: uppercase;
-            color: var(--beige); margin-bottom: 1.6rem;
+            color: var(--gs-blue); margin-bottom: 1.6rem;
             display: flex; align-items: center; gap: 1rem;
             opacity: 0; animation: fadeUp 0.8s ease 0.3s forwards;
         }
 
-        .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--beige); }
+        .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--gs-blue); }
 
         .hero-name {
             font-family: 'EB Garamond', serif;
@@ -143,7 +145,7 @@
         }
 
         .hero-name em {
-            font-style: italic; color: var(--beige);
+            font-style: italic; color: var(--gs-blue);
             display: block; font-size: 0.55em; margin-top: 0.2em;
         }
 
@@ -160,7 +162,7 @@
         }
 
         .btn-primary {
-            padding: 0.9rem 2.2rem; background: var(--beige);
+            padding: 0.9rem 2.2rem; background: var(--warm-white);
             color: var(--bg-primary); font-family: 'Libre Franklin', sans-serif;
             font-size: 0.72rem; font-weight: 600;
             letter-spacing: 0.14em; text-transform: uppercase;
@@ -169,8 +171,8 @@
         }
 
         .btn-primary:hover {
-            background: var(--beige-light); transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(212, 197, 169, 0.15);
+            background: var(--gs-blue-light); transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(115, 153, 198, 0.2);
         }
 
         .btn-outline {
@@ -182,7 +184,7 @@
             cursor: pointer; transition: all 0.3s ease;
         }
 
-        .btn-outline:hover { border-color: var(--beige); color: var(--beige); }
+        .btn-outline:hover { border-color: var(--warm-white); color: var(--warm-white); }
 
         .hero-scroll {
             position: absolute; bottom: 3rem; left: 50%;
@@ -195,7 +197,7 @@
 
         .hero-scroll-line {
             width: 1px; height: 36px;
-            background: linear-gradient(to bottom, var(--beige), transparent);
+            background: linear-gradient(to bottom, var(--gs-blue), transparent);
             animation: scrollPulse 2s ease infinite;
         }
 
@@ -206,20 +208,20 @@
         .section-label {
             font-size: 0.62rem; font-weight: 500;
             letter-spacing: 0.3em; text-transform: uppercase;
-            color: var(--beige); margin-bottom: 1rem;
+            color: var(--gs-blue); margin-bottom: 1rem;
             display: flex; align-items: center; gap: 1rem;
         }
 
-        .section-label::before { content: ''; width: 28px; height: 1px; background: var(--beige); }
+        .section-label::before { content: ''; width: 28px; height: 1px; background: var(--gs-blue); }
 
         .section-title {
             font-family: 'EB Garamond', serif;
             font-size: clamp(2rem, 3.5vw, 3rem);
             font-weight: 500; line-height: 1.15;
-            color: var(--cream);
+            color: var(--warm-white);
         }
 
-        .section-title span { color: var(--beige); }
+        .section-title span { color: var(--gs-blue); }
 
         .alt-bg {
             background: var(--bg-secondary);
@@ -255,7 +257,7 @@
         .stat-value {
             font-family: 'EB Garamond', serif;
             font-size: 1.8rem; font-weight: 600;
-            color: var(--beige); margin-bottom: 0.25rem;
+            color: var(--gs-blue); margin-bottom: 0.25rem;
         }
 
         .stat-label {
@@ -283,7 +285,7 @@
 
         .project-preview {
             width: 100%; height: 230px;
-            background: linear-gradient(145deg, #0d1117, #161b22);
+            background: linear-gradient(145deg, #151a2a, #1e2438);
             display: flex; align-items: center; justify-content: center;
             position: relative; overflow: hidden;
             border-bottom: 1px solid var(--border);
@@ -308,13 +310,13 @@
         .project-type {
             font-size: 0.58rem; font-weight: 600;
             letter-spacing: 0.22em; text-transform: uppercase;
-            color: var(--beige); margin-bottom: 0.8rem;
+            color: var(--gs-blue-light); margin-bottom: 0.8rem;
         }
 
         .project-title {
             font-family: 'EB Garamond', serif;
             font-size: 1.45rem; font-weight: 500; margin-bottom: 0.8rem;
-            color: var(--cream);
+            color: var(--warm-white);
         }
 
         .project-desc {
@@ -327,15 +329,15 @@
         .project-tag {
             padding: 0.28rem 0.65rem; font-size: 0.62rem;
             font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
-            color: var(--beige); background: var(--beige-dim);
-            border: 1px solid rgba(212, 197, 169, 0.08);
+            color: var(--gs-blue); background: var(--gs-blue-dim);
+            border: 1px solid rgba(115, 153, 198, 0.08);
         }
 
         .project-link {
             display: inline-flex; align-items: center; gap: 0.5rem;
             font-size: 0.7rem; font-weight: 500;
             letter-spacing: 0.12em; text-transform: uppercase;
-            color: var(--beige); text-decoration: none;
+            color: var(--gs-blue); text-decoration: none;
             transition: gap 0.3s ease;
         }
 
@@ -360,7 +362,7 @@
         .skill-card::before {
             content: ''; position: absolute;
             top: 0; left: 0; width: 3px; height: 0;
-            background: var(--beige); transition: height 0.4s ease;
+            background: var(--gs-blue); transition: height 0.4s ease;
         }
 
         .skill-card:hover::before { height: 100%; }
@@ -368,7 +370,7 @@
         .skill-name {
             font-family: 'EB Garamond', serif;
             font-size: 1.15rem; font-weight: 500; margin-bottom: 0.6rem;
-            color: var(--cream);
+            color: var(--warm-white);
         }
 
         .skill-detail {
@@ -394,7 +396,7 @@
 
         .social-platform {
             font-size: 0.6rem; font-weight: 600;
-            letter-spacing: 0.2em; text-transform: uppercase; color: var(--beige);
+            letter-spacing: 0.2em; text-transform: uppercase; color: var(--gs-blue-light);
         }
 
         .social-handle { font-family: 'EB Garamond', serif; font-size: 1.15rem; }
@@ -404,7 +406,7 @@
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        .social-card:hover .social-arrow { color: var(--beige); transform: translateX(4px); }
+        .social-card:hover .social-arrow { color: var(--gs-blue); transform: translateX(4px); }
 
         /* ── CONTACT ── */
         .contact-inner { max-width: 580px; }
@@ -422,7 +424,7 @@
         }
 
         .contact-email-link:hover {
-            border-color: var(--beige); background: var(--bg-card-hover);
+            border-color: var(--gs-blue); background: var(--bg-card-hover);
             transform: translateX(4px);
         }
 
@@ -451,7 +453,7 @@
             text-decoration: none; letter-spacing: 0.05em; transition: color 0.3s ease;
         }
 
-        .footer-links a:hover { color: var(--beige); }
+        .footer-links a:hover { color: var(--gs-blue); }
 
         /* ── ANIMATIONS ── */
         @keyframes fadeUp {
