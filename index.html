@@ -378,6 +378,89 @@
             font-weight: 300; line-height: 1.65;
         }
 
+        /* ── RESUME ── */
+        .resume-content {
+            display: flex;
+            gap: 3rem;
+            max-width: 1000px;
+            align-items: flex-start;
+        }
+
+        .resume-preview {
+            flex: 1;
+            max-width: 280px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            padding: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .resume-preview:hover {
+            border-color: var(--border-hover);
+        }
+
+        .resume-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .resume-preview-placeholder {
+            width: 100%;
+            aspect-ratio: 8.5/11;
+            background: linear-gradient(145deg, #151a2a, #1e2438);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'EB Garamond', serif;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .resume-info {
+            flex: 1;
+        }
+
+        .resume-info p {
+            font-size: 1rem;
+            line-height: 1.85;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .resume-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .resume-highlight {
+            padding: 0.35rem 0.8rem;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--gs-blue);
+            background: var(--gs-blue-dim);
+            border: 1px solid rgba(115, 153, 198, 0.08);
+        }
+
+        .resume-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .resume-content { flex-direction: column; }
+            .resume-preview { max-width: 100%; }
+            .resume-actions { flex-direction: column; }
+            .resume-actions .btn-primary,
+            .resume-actions .btn-outline { text-align: center; }
+        }
+
         /* ── SOCIALS ── */
         .socials-row { display: flex; gap: 1.5rem; max-width: 800px; flex-wrap: wrap; }
 
@@ -516,6 +599,7 @@
         <div class="nav-logo">Oscar Calvo<span>.</span></div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#socials">Socials</a></li>
@@ -570,6 +654,33 @@
                 <div class="stat-card">
                     <div class="stat-value">OC</div>
                     <div class="stat-label">Based in Orange County</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-header reveal">
+            <div class="section-label">Credentials</div>
+            <h2 class="section-title">My <span>Resume</span></h2>
+        </div>
+        <div class="resume-content reveal">
+            <div class="resume-preview">
+                <div class="resume-preview-placeholder">PDF Preview</div>
+            </div>
+            <div class="resume-info">
+                <p>B.S. in Business Finance from California State University, Long Beach. Experience in cost analysis, financial modeling, and budget reconciliation within municipal finance. Skilled in Excel, Power BI, and Bloomberg.</p>
+                <div class="resume-highlights">
+                    <span class="resume-highlight">Financial Modeling</span>
+                    <span class="resume-highlight">Excel</span>
+                    <span class="resume-highlight">Power BI</span>
+                    <span class="resume-highlight">Bloomberg</span>
+                    <span class="resume-highlight">Cost Analysis</span>
+                    <span class="resume-highlight">Bilingual (Spanish)</span>
+                </div>
+                <div class="resume-actions">
+                    <a href="OSCAR_CALVO_RESUME.pdf" target="_blank" class="btn-primary">View Resume</a>
+                    <a href="OSCAR_CALVO_RESUME.pdf" download class="btn-outline">Download PDF</a>
                 </div>
             </div>
         </div>
